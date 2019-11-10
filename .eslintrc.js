@@ -36,5 +36,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     "react/state-in-constructor": 'off',
     "react/static-property-placement": 'off',
+    "eslint-disable-next-line": 'off',
+    "react/no-typos": 'off'
   },
 };
