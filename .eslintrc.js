@@ -37,6 +37,8 @@ module.exports = {
     "react/state-in-constructor": 'off',
     "react/static-property-placement": 'off',
     "eslint-disable-next-line": 'off',
-    "react/no-typos": 'off'
+    "react/no-typos": 'off',
+    "react/prefer-stateless-function": 'off',
+
   },
 };
