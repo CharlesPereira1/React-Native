@@ -38,7 +38,9 @@ module.exports = {
     "react/static-property-placement": 'off',
     "eslint-disable-next-line": 'off',
     "react/no-typos": 'off',
+    "react/sort-comp": 'off',
     "react/prefer-stateless-function": 'off',
+    'no-console': ["error", { allow: ["tron"] }],
 
   },
 };

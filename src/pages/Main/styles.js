@@ -32,6 +32,7 @@ export const SubmitButton = styled(RectButton)`
   margin-left: 10px;
   padding: 0 12px;
 `;
+// /////////////////////////////////////////////////////////////
 
 export const List = styled.FlatList.attrs({
   showsVerticalScrollIndicator: false, // tira a barra de rolagem

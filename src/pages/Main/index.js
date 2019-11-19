@@ -38,7 +38,8 @@ export default class Main extends Component {
   };
 
   async componentDidMount() {
-    const users = await AsyncStorage.mergeItem('users');
+    console.tron.log(this.props);
+    const users = await AsyncStorage.getItem('users');
 
     if (users) {
       this.setState({ users: JSON.parse(users) });
