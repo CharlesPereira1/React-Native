@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { ActivityIndicator } from 'react-native';
 import PropTypes from 'prop-types';
 import api from '../../services/api';
-
 import {
   Container,
   Header,
@@ -22,7 +20,7 @@ export default class User extends Component {
     title: navigation.getParam('user').name,
   });
 
-  static PropTypes = {
+  static propTypes = {
     navigation: PropTypes.shape({
       getParam: PropTypes.func,
     }).isRequired,
@@ -39,7 +37,7 @@ export default class User extends Component {
 
     this.setState({ loading: true });
 
-    const response = await api.get(`/user/${user.login}/starred`);
+    const response = await api.get(`/users/${user.login}/starred`);
 
     this.setState({ stars: response.data, loading: false });
   }
@@ -66,7 +64,7 @@ export default class User extends Component {
               <OwnerAvatar source={{ uri: item.owner.avatar_url }} />
               <Info>
                 <Title>{item.name}</Title>
-                <Author>{item.owner}</Author>
+                <Author>{item.owner.login}</Author>
               </Info>
             </Starred>
           )}
